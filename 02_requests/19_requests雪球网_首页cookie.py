@@ -6,7 +6,7 @@ headers = {
 
 main_url = 'https://xueqiu.com/'
 response = requests.get(main_url, headers=headers)
-cookies = dict(response.cookies)
+cookies = response.cookies
 
 url = 'https://xueqiu.com/statuses/hot/listV2.json?since_id=-1&max_id=401614&size=15'
 req = requests.get(url, headers=headers, cookies=cookies)
