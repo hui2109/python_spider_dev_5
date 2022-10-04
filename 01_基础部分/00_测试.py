@@ -1,5 +1,21 @@
-a = 5
+# a = []
+#
+#
+# def run1():
+#     a.append('abc')
+#     print('abc', a)
+#
+#
+# run1()
+# print(a)
 
-for i in range(1, 4):
-    print(a * i)
-    a = 2
+# b = 45
+#
+#
+# def run1():
+#     b = 1
+#     print('abc', b)
+#
+#
+# run1()
+# print(b)
