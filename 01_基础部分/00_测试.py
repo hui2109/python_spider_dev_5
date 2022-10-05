@@ -1,13 +1,13 @@
-a = []
-
-
-def run1():
-    a.append('abc')
-    print('abc', a)
-
-
-run1()
-print(a)
+# a = []
+#
+#
+# def run1():
+#     a.append('abc')
+#     print('abc', a)
+#
+#
+# run1()
+# print(a)
 #
 # # b = 45
 # #
@@ -48,3 +48,7 @@ print(a)
 #
 # run()
 # print(d)
+
+g = 5
+
+assert g == 200
