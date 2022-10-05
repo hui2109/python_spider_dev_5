@@ -45,7 +45,7 @@ if __name__ == '__main__':
     #     pool.join()
     #
     #     t2 = time.time()
-    #     print('斗图网的图片爬取完毕', '耗时：', str(t2 - t1))
+    #     print('斗图网的图片爬取完毕', '耗时：', string(t2 - t1))
     # except Exception as e:
     #     print(e)
 

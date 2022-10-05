@@ -20,6 +20,5 @@ if __name__ == "__main__":
     # 创建进程并启动
     p = Process(target=run1, args=("lucky",))
     p.start()
-
     # 主进程执行run2()函数
     run2()
