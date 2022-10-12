@@ -1,54 +1,18 @@
-# a = []
-#
-#
-# def run1():
-#     a.append('abc')
-#     print('abc', a)
-#
-#
-# run1()
-# print(a)
-#
-# # b = 45
-# #
-# #
-# # def run1():
-# #     b = 1
-# #     print('abc', b)
-# #
-# #
-# # run1()
-# # print(b)
-#
-# a = 5
-# c = 'abc'
-#
-#
-# def run():
-#     # print(a)
-#     # print(a + 1)
-#     # a = a + 1
-#     # # b = a + 1
-#     # print(a)
-#
-#     print(c)
-#     print(c + '5')
-#     c = c + 'ab'
-#
-#
-# run()
+import asyncio
 
-# d = []
-#
-#
-# def run():
-#     d.append('123')
-#     d = '123'
-#
-#
-# run()
-# print(d)
 
-g = 5
+async def run1():
+    print('yes')
 
-assert g == 200
+
+async def run2():
+    await run1()
+    await run3()
+    print('another')
+
+
+def run3():
+    print('ert')
+
+
+asyncio.run(run2())
