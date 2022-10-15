@@ -1,0 +1,199 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BOSS直聘</title>
+    <style>
+        * { margin:0; padding:0; box-sizing: border-box; }
+        html,body { height:100%; }
+        body { background-color:#EEF0F5; }
+        body,button { font-family: arial, verdana, helvetica,'PingFang SC','HanHei SC','STHeitiSC-Light', Microsoft Yahei,sans-serif; font-size: 14px; line-height: 24px; color: #414a60; -webkit-font-smoothing: antialiased;}
+        a { text-decoration:none; }
+        #wrap { position:relative; min-height:560px; height: 100%; }
+        #main{ height: 100%; position: relative; }
+        .btn { display:inline-block; width:98px; height:32px; line-height:32px; border:1px #62D5C8 solid; color:#5dd5c8; text-align:center; margin-right:20px; }
+        .btn:hover { background-color:#fff; }
+        .error-content { position:absolute; width:652px; min-height:260px; top:50%; left:50%; margin-left:-326px; margin-top:-219px; background:url(https://www.zhipin.com/v2/web/boss/images/icon-page-error.png) right 48px no-repeat; }
+        .error-content h1 { font-size:34px; line-height:48px; margin-bottom: 14px; color: #414A60; font-weight: 600; }
+        .error-content h2 { font-size:18px; line-height:25px; margin-bottom: 20px; color: #8D92A1; font-weight: 500; }
+        .error-content .gray { padding-right: 300px; margin-bottom: 40px; font-size:14px; font-weight: normal; line-height: 34px; color:#8D92A1;}
+        .error-content .gray p { max-width: none; line-height: 20px; position: relative; padding-left: 6px; }
+        .error-content .gray p i{
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 2px;
+            height: 2px;
+            border-radius: 100%;
+            background-color: #8D92A1;
+            vertical-align: middle;
+        }
+        .error-content .gray p + p { margin-top: 16px; }
+        .error-content p { color:#8D92A1; max-width:300px; }
+        .error-content .btns { padding-top:30px; }
+        .scan-container .scan-qrcode { width: 144px; height: 144px; display: block; }
+        .scan-container span { line-height: 21px; font-size: 15px; color: #8D92A1; margin-bottom: 14px; display: block; text-align: left; }
+        .download-app{
+            display: none;
+        }
+        .login-btn{
+            display: inline-block;
+            width: 70px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            background: #5DD5C8;
+            border-radius: 2px;
+            font-size: 14px;
+            color: #ffffff;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-top: 6px;
+        }
+        #footer { position:absolute; width:100%; bottom:10px; text-align:center; color:#bec3d1; }
+        @media (max-width: 760px) {
+            #wrap { min-height:650px; }
+            .error-content { top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0 auto; padding: 0 20px; min-width: 320px; width: 100%; background-position: center top; background-size: 233px auto; text-align: center; padding-top: 172px; }
+            .error-content h1 { font-size: 30px; line-height: 42px; margin-bottom: 16px; font-weight: 600; }
+            .error-content h2 { font-size:16px; line-height:22px; margin-bottom: 20px; color: #8D92A1; font-weight: 500; }
+            .error-content .gray { font-size: 13px; font-weight: 500; padding: 0; text-align: left; padding: 0 16px; }
+            .error-content .gray p { line-height: 18px; }
+            .btns { white-space: nowrap; }
+            .scan-container {
+                display: none;
+            }
+            .download-app{
+                display: block;
+                text-align: left;
+            }
+            .download-app span{
+                display: block;
+                text-align: left;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                color: #8D92A1;
+                padding: 0 16px;
+            }
+            .download-app .download-app-btn{
+                display: block;
+                width: 100%;
+                height: 45px;
+                background: #37C2BC;
+                border-radius: 3px;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                line-height: 45px;
+            }
+            #footer { font-size: 12px; }
+        }
+        #code31, #code32{
+            display: none;
+        }
+    </style>
+    <script src="https://static.zhipin.com/library/js/analytics/ka.zhipin.min.js"></script><script src="https://static.zhipin.com/library/js/analytics/ka.zhipin.min.js"></script><script>
+            var _T = _T || [];
+            (function() {
+                var script = document.createElement("script");
+                script.src = "https://static.zhipin.com/library/js/analytics/ka.zhipin.min.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(script, s);
+            })();
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div id="main">
+        <div class="error-content">
+            <div class="text">
+                <h1>403</h1>
+                <h2>您暂时无法继续访问~</h2>
+                    <div id="code31" style="display: block;">
+                        <div class="gray">
+                            <p><i></i><span class="tips-31">您的 IP 存在异常访问行为，暂时被禁止访问！</span></p>
+                            <p><i></i>将于<span class="expire-time">2022-10-16 15:31</span> 恢复正常，请勿频繁提交刷新请求<br>也可以<a href="https://login.zhipin.com/" ka="403_login" class="login-btn">登录</a>后正常访问。</p>
+                            <p><i></i>如有疑问，请联系客服人员：400 065 5799</p>
+                        </div>
+                        <div class="scan-container">
+                            <span>您也可以扫码下载BOSS直聘APP访问：</span>
+                            <img class="scan-qrcode" src="https://res.zhipin.com/web/geek/resource/download-app-qrcode1.png" alt="下载BOSS直聘App">
+                        </div>
+                        <div class="download-app">
+                            <span>您也可以点击下载APP访问：</span>
+                            <a class="download-app-btn" ka="403-download-app" href="https://m.zhipin.com/wflow/zpCommon/download/index/?type=ck&amp;pkn=main-m&amp;sid=403yemian_198">下载BOSS直聘APP</a>
+                        </div>
+                    </div>
+                   
+                    <div class="gray" id="code32">
+                        <span class="tips-32">您的账号存在多次违规访问行为，已暂时被禁止访问</span>您也可以尝试访问BOSS直聘<a href="https://login.zhipin.com/">首页</a>以便自行解除限制。<br>
+                        将于<span class="expire-time">2022-10-16 15:31</span> 恢复正常，请勿频繁提交刷新请求，耐心等待。<br>
+                        如有疑问，请联系客服人员：400 065 5799
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>© copyright BOSS直聘  京ICP备14013441号-5</p>
+    </div>
+    <input type="hidden" id="page_key_name" value="web_403_page">
+</div>
+<script src="https://static.zhipin.com/library/js/lib/jquery-1.12.2.min.js"></script>
+<script>
+    //时间戳转换方法    date:时间戳数字
+    function formatDate(date) {
+        var date = new Date(date);
+        var YY = date.getFullYear() + '-';
+        var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+        var hh = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+        var mm = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+        // var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+        // return YY + MM + DD +" "+hh + mm + ss;
+        return YY + MM + DD +' '+ hh + mm;
+    }
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split('=');
+                if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    var code = getQueryVariable('code') || 0;
+    $.get('/wapi/zpAntispam/v2/getForbiddenInfo',{'code': code}).success(function(res){
+        if(res.code === 0 && res.zpData) {
+            if(res.zpData.jumpVerify){
+                location.href = res.zpData.jumpUrl || '/';
+            }
+            if(res.zpData.expireTime){
+                var time = formatDate(res.zpData.expireTime);
+                $('#main').find('.expire-time').html(time);
+            }
+            var code = res.zpData.code;
+            if(code){
+                $('#code'+code).show();
+                if(res.zpData.tip){
+                    $('.tips-'+code).html(res.zpData.tip);
+                }
+            }else{
+                $('#code31').show();
+                $('#main').find('.expire-time').html('24小时后');
+            }
+        }else{
+            $('#code31').show();
+            $('#main').find('.expire-time').html('24小时后');
+        }
+    });
+    var _T = _T || [];
+    (function () {
+        var script = document.createElement("script");
+        script.src = "https://static.zhipin.com/library/js/analytics/ka.zhipin.min.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(script, s);
+    })();
+</script>
+
+</body></html>
