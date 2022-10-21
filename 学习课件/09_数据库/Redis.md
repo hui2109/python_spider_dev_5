@@ -573,7 +573,7 @@ sdiff m l	#求差集 注意比较顺序
 > sismember key member
 
 ```python
-sissmember m 'a'   #集合m中是否存在元素'a'
+sismember m 'a'   #集合m中是否存在元素'a'
 ```
 
 
