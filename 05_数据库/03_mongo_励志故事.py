@@ -1,7 +1,7 @@
 import random
 import time
 
-import pymysql
+import pymongo
 import requests
 from lxml import etree
 
@@ -10,9 +10,9 @@ def get_content(url):
     content_response = session.get(url)
     content_tree = etree.HTML(content_response.content.decode('utf-8'))
     title = content_tree.xpath('//article/h1/text()')[0].replace('"', '')
-    authors = ', '.join(content_tree.xpath('//article/div[@class="wz_info"]/span[3]/text()')[0].split('��')[1:]).replace(
+    authors = ', '.join(content_tree.xpath('//article/div[@class="wz_info"]/span[3]/text()')[0].split('：')[1:]).replace(
         '"', '')
-    time = content_tree.xpath('//article/div[@class="wz_info"]/span[4]/text()')[0].split('��')[1].replace('"', '')
+    time = content_tree.xpath('//article/div[@class="wz_info"]/span[4]/text()')[0].split('：')[1].replace('"', '')
     content = ''
     for i in content_tree.xpath('//article/div[@class="content"]//text()'):
         if i.strip() != '':
@@ -28,11 +28,12 @@ def get_content(url):
 
 def write_into_db(data):
     title, authors, time, read_number, content = data
-    # sql=
+    db.stories.insert_one(
+        {'标题': f'{title}', '作者': f'{authors}', '时间': f'{time}', '阅读数': f'{read_number}', '内容': f'{content}'})
 
 
-db = pymysql.connect(user='root', password='182182aA', host='localhost', port=3306, charset='utf8', database='test1')
-cursor = db.cursor()
+conn = pymongo.MongoClient(host='localhost', port=27017)
+db = conn.python
 
 session = requests.Session()
 session.headers[
@@ -46,5 +47,4 @@ for href in href_list:
     data = get_content(href)
     write_into_db(data)
     time.sleep(random.randint(1, 5))
-cursor.close()
-db.close()
+conn.close()
