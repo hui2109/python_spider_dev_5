@@ -12,7 +12,7 @@ if not os.path.exists('./scu_libs.json'):
             "0": {"2021224020228": "205513"},
             "1": {},
             "2": {},
-            "3": null}, f)
+            "3": {}}, f)
 with open('./scu_libs.json', 'r', True, 'utf-8') as f:
     info_dict = json.load(f)
 
