@@ -21,23 +21,22 @@ def get_content(url):
 
     read_url = 'https://www.3dst.cn/e/public/ViewClick/?classid=8&id=1203&addclick=1'
     read_response = session.get(read_url)
-    read_number = read_response.content.decode('utf-8').split('\'')[1].replace('"', '')
+    read_number = int(read_response.content.decode('utf-8').split('\'')[1].replace('"', ''))
 
     return title, authors, time, read_number, content
 
 
 def write_into_db(data):
-    title, authors, time, read_number, content = data
     try:
-        sql = f'insert into 励志文章 values(null, "{title}", "{authors}", "{time}", {read_number},"{content}")'
-        cursor.execute(sql)
+        sql = 'insert into 励志文章 (标题,作者,时间,阅读数,内容) values(%s, %s, %s, %s, %s)'
+        cursor.execute(sql, data)
         db.commit()
     except Exception as e:
         print(e)
         db.rollback()
 
 
-db = pymysql.connect(user='root', password='182182aA', host='localhost', port=3306, charset='utf8', database='test1')
+db = pymysql.connect(user='ahui', password='182182aA', host='43.138.31.29', port=3306, charset='utf8', database='my_test')
 cursor = db.cursor()
 
 session = requests.Session()
