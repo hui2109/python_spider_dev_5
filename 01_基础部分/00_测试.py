@@ -1,18 +1,12 @@
-import asyncio
+import requests
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+}
+proxies = {
+    'http': '47.93.232.37:80',
+}
 
-async def run1():
-    print('yes')
-
-
-async def run2():
-    await run1()
-    await run3()
-    print('another')
-
-
-def run3():
-    print('ert')
-
-
-asyncio.run(run2())
+response = requests.get('http://icanhazip.com/', headers=headers, proxies=proxies)
+content = response.content.decode('utf-8')
+print(content)
