@@ -536,7 +536,7 @@ spop set
 > srandmember  key  count
 
 ```python
-s set		#返回一个随机元素
+srandmember set		#返回一个随机元素
 srandmember set 2	#返回2个随机元素
 ```
 
