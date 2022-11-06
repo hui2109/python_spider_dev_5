@@ -10,3 +10,20 @@ proxies = {
 response = requests.get('http://icanhazip.com/', headers=headers, proxies=proxies)
 content = response.content.decode('utf-8')
 print(content)
+
+dd
+proxies
+def
+    def
+import scrapy
+import selenium
+import distutils
+import.print()
+'ddddd'
+print('ddddd')
+'''
+hghfhfghfj
+'''
+
+import distutils scrapy time distutils distutilsd pyqy
+
