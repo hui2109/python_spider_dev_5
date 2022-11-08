@@ -2,7 +2,7 @@
 IP_URL_1 = 'https://www.kuaidaili.com/free/inha/'
 
 # 爬取的页数
-PAGE_NUMBER = 20
+PAGE_NUMBER = 4860
 
 # 数据库信息
 HOST = '43.138.31.29'

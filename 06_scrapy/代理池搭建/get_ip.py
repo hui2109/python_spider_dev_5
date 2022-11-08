@@ -21,8 +21,8 @@ class HGetIp:
             asyncio.set_event_loop(loop)
             loop.run_until_complete(self.start_get_all_url())
 
-            # 每一小时左右爬取一次
-            time.sleep(random.randint(3500, 4600))
+            # 每24小时左右爬取一次
+            time.sleep(random.randint(85400, 87400))
 
     async def start_get_all_url(self):
         tasks = [asyncio.create_task(self.get_all_url_1()), asyncio.create_task(self.get_all_url_2())]
