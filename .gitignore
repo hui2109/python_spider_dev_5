@@ -148,3 +148,6 @@ dmypy.json
 
 # 增加zol_pictures文件夹
 00_素材箱/zol_pictures/
+
+# 增加中大网校文件夹
+00_素材箱/中大网校/
