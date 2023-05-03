@@ -153,6 +153,6 @@ dmypy.json
 00_素材箱/中大网校/
 
 # 排除爬取的网易音乐及node包
-08_逆向_网易云音乐/node_modules
+08_实战_网易云音乐/node_modules
 00_素材箱/网易音乐
-09_逆向_招标网/node_modules
+09_实战_招标网/node_modules
