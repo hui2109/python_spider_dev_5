@@ -1,3 +1,20 @@
+"""
+way: AES
+key: ydsecret://query/key/B*RGygVywfNBwpmBaZg*WT7SIOUP2T0C9WHMZN39j^DAdaZhAnxvGcCY6VYFwnHl
+把key拿去算md5，得到16个字节
+iv: ydsecret://query/iv/C@lZe2YzHtZ2CYgaXKSVfsb7Y4QWHjITPPZ0nQp87fBeJ!Iv6v^6fvi2WN@bYpJ4
+把iv拿去算md5，得到16个字节
+mode: CBC
+
+返回加密的base64字符串:
+步骤1：  t.length % 4 !== 0
+        t += "="
+
+
+
+
+"""
+
 from hashlib import md5
 import requests
 import time
@@ -31,4 +48,4 @@ headers = {
     'Cookie': 'OUTFOX_SEARCH_USER_ID_NCOO=1547736371.5531156; OUTFOX_SEARCH_USER_ID=-1328728229@218.194.27.203'
 }
 resp = requests.post(url, data=data, headers=headers)
-print(resp.text)
+print(resp.text)  # 返回加密的base64字符串
