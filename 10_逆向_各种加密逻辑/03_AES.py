@@ -4,6 +4,7 @@ import binascii
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
+# 安装包：pip install pycryptodome
 # 对称加密：加密和解密时使用的秘钥是同一个.
 # AES, DES, 3DES
 
