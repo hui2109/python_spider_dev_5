@@ -44,6 +44,8 @@
 
 4、Content-type
 
+不能随便加【Host】！！！！！
+
 ## 爬虫的post请求
 
 1. 请求载荷（request payload）：只能给json数据，在请求头的content-type里也可以看到是json。
@@ -51,6 +53,8 @@
    这种情况一定要改headers，加上content-type（application/json; charset=UTF-8）
 
    给的数据也要转换成json，json.dumps()
+
+   requests中传参直接使用json=data
 
 2. 表单数据（form data）：直接给字典，data=字典。
    scrapy中，导包，from scrapy import FormRequest
