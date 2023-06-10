@@ -152,10 +152,8 @@ dmypy.json
 # 增加中大网校文件夹
 00_素材箱/中大网校/
 
-# 排除爬取的网易音乐及node包
+# 排除爬取的网易音乐
 00_素材箱/网易音乐/
 
 # 排除node包
-08_实战_网易云音乐/node_modules/
-09_实战_招标网/node_modules/
-15_实战_艺恩_OB混淆/node_modules/
+**/node_modules/

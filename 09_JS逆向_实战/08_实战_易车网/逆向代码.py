@@ -42,5 +42,5 @@ params = {
     'param': json.dumps(temp_data, separators=(',', ':'))
 }
 resp = requests.get(url=url, params=params, headers=headers)
-with open('./data.json', 'w', 1, 'utf-8') as f:
+with open('data.json', 'w', 1, 'utf-8') as f:
     f.write(resp.text)

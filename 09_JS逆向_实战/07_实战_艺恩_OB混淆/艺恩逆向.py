@@ -23,7 +23,7 @@ headers = {
 response = requests.post(headers=headers, url=url, data=data)
 mi_str = response.text
 
-with open('./混淆代码.js', 'r', True, 'utf-8') as f:
+with open('混淆代码.js', 'r', True, 'utf-8') as f:
     js_code = f.read()
 
 js = execjs.compile(js_code)

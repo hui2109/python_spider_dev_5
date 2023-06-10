@@ -19,7 +19,7 @@ response = requests.get(url, headers=headers)
 ciphertext = response.text.strip('"')
 # print(ciphertext)
 
-with open('./逆向代码.js', 'r', True, 'utf-8') as f:
+with open('逆向代码.js', 'r', True, 'utf-8') as f:
     js_code = f.read()
 js = execjs.compile(js_code)
 result = js.call('decryptByDES', ciphertext)

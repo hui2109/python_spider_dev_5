@@ -1,16 +1,9 @@
-import multiprocessing
+import json
 
-from test1 import PrintNumber
+a = {
+    "name": "张三",
+    "age": 18,
+    'hobbies': ["吃饭", "睡觉", "打豆豆"]
+}
+print(json.dumps(a, separators=(',', ':'), ensure_ascii=False))
 
-
-def runner():
-    process_pool = multiprocessing.Pool(3)
-    test = PrintNumber(12)
-    process_pool.apply_async(test.run_task, args=())
-
-    process_pool.close()
-    process_pool.join()
-
-
-if __name__ == "__main__":
-    runner()
