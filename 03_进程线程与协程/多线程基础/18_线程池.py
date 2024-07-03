@@ -13,7 +13,7 @@ name_list = ["lucky", "卢yuan凯", "姚青", "刘佳俊", "何必喆"]
 pool = ThreadPoolExecutor(5)  # 控制线程的并发数
 
 # for i in name_list:
-#     pool.submit(go, i)
+# #     pool.submit(go, i)
 # 简写形式
 # all_task = [pool.submit(go, i) for i in name_list]
 # print(all_task)
