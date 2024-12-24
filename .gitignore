@@ -157,3 +157,6 @@ dmypy.json
 
 # 排除node包
 **/node_modules/
+
+# 排除学习课件
+/学习课件
